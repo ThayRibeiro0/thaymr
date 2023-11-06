@@ -1,0 +1,203 @@
+.active{
+    background-color: rgb(240, 22, 22);
+    display: flex; 
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: black
+}
+
+nav ul {
+    display: flex;
+}
+
+.logocomplete {
+    gap: 0.5rem ;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.logo {
+    font-weight: bold;
+    max-width: 50px;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.logoname {
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.ul {
+    display: flex;
+    list-style-type: none;
+    margin: 8px;
+    padding: 0;
+    background-color: #fff;
+}
+
+
+.elementsli {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
+    size: 90px;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+.elementsli:not(.active):hover{
+    background-color: rgb(83, 17, 17);
+}
+
+nav .menu {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 36px;
+    right: 55px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 0.1rem;
+}   
+
+
+@media (max-width: 900px) {
+
+    .logocomplete {
+        font-weight: bold;
+        max-width: 70px;
+        margin-right: 90%;
+        text-decoration: none;
+    }
+
+    nav .menu {
+        display: flex;
+        right: 5%;
+        color: #fff;
+    }
+
+    nav .menu.open{
+        background-color: transparent;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 80%;
+        right: -1%;
+        width: 240px;
+        transform: translateX(0);
+        border: 1px;
+        border-radius: 10px;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    ul.close{
+        padding: 20px;
+        align-items: left;
+        font-weight: 500;
+        background: linear-gradient(to right, rgb(30, 11, 12), rgb(88, 87, 87))
+    }
+
+    ul.open{
+        padding: 20px;
+        align-items: left;
+        font-weight: 500;
+        visibility: hidden;
+        background: transparent
+    }
+
+    .elementsli {
+        display: flex;
+    }
+
+    .open .elementsli {
+        display: none;
+    }
+    
+    nav ul {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul li {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 10px  0;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+        max-width: 100px;
+        margin-left: 10px;
+        transition: var(--speed);
+    }
+
+    .toggle{
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        top: 36px;
+        right: 55px;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2rem;
+        height: 1.3rem;
+        color: #fff;
+        border-radius: 0.1rem;
+    }
+    .close-button {
+        position: absolute;
+        top: 35px; 
+        right: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.1rem;
+    }
+  
+ 
+    .hidden {
+        display: none;
+    }
+
+    svg.close-button{
+        background-color: transparent;
+        color: #fff;
+    }
+  
+}
+
