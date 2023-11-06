@@ -7,12 +7,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 //Pages
 
-import Home from "./Components/Home.tsx"
-import About from './Components/About.tsx'
-import Projects from './Components/Projects.tsx'
-import Work from './Components/Work.tsx'
-import Testimonials from './Components/Testimonials.tsx'
-import Contact from './Components/Contact.tsx'
+import Home from "./components/Home.tsx"
+import About from './components/About.tsx'
+import Projects from './components/Projects.tsx'
+import Work from './components/Work.tsx'
+import Testimonials from './components/Testimonials.tsx'
+import Contact from './components/Contact.tsx'
 
 const router = createBrowserRouter([
   {
